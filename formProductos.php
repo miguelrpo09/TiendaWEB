@@ -34,13 +34,13 @@
 </header>
 <main>
 <div class="container">
-            <div class="row justify-content-center ">
+            <div class="row justify-content-center">
               <div class="col4">
-                <form class="mt-5" enctype="multipart/form-data" action="registrarproductos.php" method="POST">
-                    <H4 class="text-center">ADMINISTRACIÓN DE PRODUCTOS</H4>
+                <form class="mt-5" enctype="multipart/form-data" action="registrarProductos.php" method="POST">
+                    <H4 class="text-center" >ADMINISTRACIÓN DE PRODUCTOS</H4>
                     <div class="row mt-4">
                         <div class="col">
-                            <input name="Nombreproducto" type="text" class="form-control" placeholder="Nombre del producto">
+                            <input name="nombreproducto" type="text" class="form-control" placeholder="Nombre del producto">
                         </div>
                         <div class="col">
                             <input name="marcaproducto" type="text" class="form-control" placeholder="Marca del producto">
@@ -48,7 +48,7 @@
                     </div>
                         <div class="col4 mt-4">
                             <input type="hidden" name="MAX_FILE_SIZE" value="4000000" />
-                            <input type="file" name="imagenprod" id="imagenprod" accept="image/png, .jpeg, .jpg, image/gif">
+                            <input type="file" name="imgProducto" id="imgProducto" accept="image/png, .jpeg, .jpg, image/gif">
                         </div>
                         <div class="col4 mt-4">
                             <input name="precioProducto" type="text" class="form-control" placeholder="Precio del producto">
@@ -57,7 +57,7 @@
                             <textarea class="form-control" name="txAreaDescripcion" rows="3" placeholder="Descripcion"></textarea>
                         </div>
                         <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-primary mt-5 " name=btnRegistrar>Registrar</button>
+                        <button type="submit" class="btn btn-primary mt-5 " name=btnIngresarProducto>Registrar</button>
                         </div>
                     </div>                    
                 </form>

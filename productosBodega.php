@@ -28,7 +28,7 @@ $listaProductos=$transaccion->consultarProductos($consultaSQL);
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
             <a class="navbar-brand" href="#">Tienda WEB</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +61,7 @@ $listaProductos=$transaccion->consultarProductos($consultaSQL);
                 <?php 
               foreach ($listaProductos as $producto) {
             ?>
-                <div class="col-md-3">
+                <div class="col-md-3 mb-4">
                     <div class="card h-100 mb-3 shadow-sm">
                         <img class="card-img-top" style="height:180px " src="<?php echo $producto['imgProducto'];?>"
                             alt="Foto">

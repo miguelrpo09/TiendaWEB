@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Formulario productos</title>
 </head>
+
 <body>
 <header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
             <a class="navbar-brand" href="#">Tienda WEB</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -36,14 +38,14 @@
 <div class="container">
             <div class="row justify-content-center">
               <div class="col4">
-                <form class="mt-5" enctype="multipart/form-data" action="registrarProductos.php" method="POST">
+                <form class="mt-5 border border-info p-3 rounded-20px" enctype="multipart/form-data" action="registrarProductos.php" method="POST">
                     <H4 class="text-center" >ADMINISTRACIÓN DE PRODUCTOS</H4>
                     <div class="row mt-4">
                         <div class="col">
-                            <input name="nombreproducto" type="text" class="form-control" placeholder="Nombre del producto">
+                            <input name="nombreproducto" type="text" class="form-control rounded-10px" placeholder="Nombre del producto">
                         </div>
                         <div class="col">
-                            <input name="marcaproducto" type="text" class="form-control" placeholder="Marca del producto">
+                            <input name="marcaproducto" type="text" class="form-control rounded-10px" placeholder="Marca del producto">
                         </div>                            
                     </div>
                         <div class="col4 mt-4">
@@ -51,13 +53,13 @@
                             <input type="file" name="imgProducto" id="imgProducto" accept="image/png, .jpeg, .jpg, image/gif">
                         </div>
                         <div class="col4 mt-4">
-                            <input name="precioProducto" type="text" class="form-control" placeholder="Precio del producto">
+                            <input name="precioProducto" type="text" class="form-control rounded-10px" placeholder="Precio del producto">
                         </div>
                         <div class="col4 mt-4">
-                            <textarea class="form-control" name="txAreaDescripcion" rows="3" placeholder="Descripcion"></textarea>
+                            <textarea class="form-control rounded-10px" name="txAreaDescripcion" rows="3" placeholder="Descripcion"></textarea>
                         </div>
                         <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-primary mt-5 " name=btnIngresarProducto>Registrar</button>
+                        <button type="submit" class="btn btn-primary mt-5 rounded-10px " name=btnIngresarProducto>Registrar</button>
                         </div>
                     </div>                    
                 </form>

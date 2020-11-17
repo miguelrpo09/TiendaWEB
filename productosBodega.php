@@ -29,7 +29,7 @@ $listaProductos=$transaccion->consultarProductos($consultaSQL);
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-            <a class="navbar-brand" href="#">Tienda WEB</a>
+            <a class="navbar-brand" href="#" >Tienda WEB</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -46,10 +46,7 @@ $listaProductos=$transaccion->consultarProductos($consultaSQL);
                         <a class="nav-link" href="productosBodega.php">Productos Bodega</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
+
             </div>
         </nav>
     </header>
@@ -61,24 +58,24 @@ $listaProductos=$transaccion->consultarProductos($consultaSQL);
                 <?php 
               foreach ($listaProductos as $producto) {
             ?>
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 mb-3 shadow-sm">
-                        <img class="card-img-top" style="height:180px " src="<?php echo $producto['imgProducto'];?>"
+                <div class="col-md-3 mb-3">
+                    <div class="card h-100 mb-2 shadow-sm">
+                        <img class="card-img-top " style="height:13rem" src="<?php echo $producto['imgProducto'];?>"
                             alt="Foto">
                         <div class="card-body">
-                            <h4 class="card-title text-center"><?php echo $producto['nombreProducto'];?></h4>
+                            <h4 class="card-title text-center alert alert-secondary"><?php echo $producto['nombreProducto'];?></h4>
                             <p class="card-text text-center"><?php echo $producto['descripcionProducto'];?></p>
-                            <p class="card-text text-center">
+                            <p class="card-text text-center text-danger">
                                 <?php echo '$ '.number_format($producto['precioProducto']);?></p>
                                 <div class="card-text text-center">
                                     <small class="text-muted text-center" >Marca: <?php echo $producto['marcaProducto'];?></small>
                                 </div>
                         </div>
-                        <div class="card-footer text-center">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary px-3"
+                        <div class="card-footer text-center alert alert-dark">
+                                    <button type="button" class="btn btn-sm btn-success px-3 "
                                         name="btnEditarProducto" data-toggle="modal"
                                         data-target="#editar<?php echo($producto["idProducto"])?>">Editar <svg
-                                            width="1em" height="1em" style="color:green;" viewBox="0 0 16 16"
+                                            width="1em" height="1em" style="color:white;" viewBox="0 0 16 16"
                                             class="bi bi-pencil-square" fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -88,8 +85,8 @@ $listaProductos=$transaccion->consultarProductos($consultaSQL);
                                         </svg>
                                     </button >
                                     <a href="eliminarProductos.php?id=<?php echo($producto['idProducto'])?>"
-                                        class="btn btn-danger btn-sm px-3">Eliminar<svg width="1em" height="1em" viewBox="0 0 16 16"
-                                            class="bi bi-trash-fill" style="color:black;" fill="currentColor"
+                                        class="btn btn-sm btn-danger px-3">Eliminar<svg width="1em" height="1em" viewBox="0 0 16 16"
+                                            class="bi bi-trash-fill" style="color:white;" fill="currentColor"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd"
                                                 d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z" />
@@ -115,25 +112,25 @@ $listaProductos=$transaccion->consultarProductos($consultaSQL);
                                     method="POST">
                                     <div class="form-group">
                                         <label>Nombre Producto:</label>
-                                        <input type="text" class="form-control" name="nombreProductoEditar"
+                                        <input type="text" class="form-control rounded-20px" name="nombreProductoEditar"
                                             value="<?php echo($producto["nombreProducto"])?>">
                                     </div>
                                     <div class="form-group">
                                         <label>Marca Producto:</label>
-                                        <input type="text" class="form-control" name="marcaProductoEditar"
+                                        <input type="text" class="form-control rounded-20px" name="marcaProductoEditar"
                                             value="<?php echo($producto["marcaProducto"])?>">
                                     </div>
                                     <div class="form-group">
                                         <label>Precio Producto:</label>
-                                        <input type="text" class="form-control" name="precioProductoEditar"
+                                        <input type="text" class="form-control rounded-20px" name="precioProductoEditar"
                                             value="<?php echo($producto["precioProducto"])?>">
                                     </div>
                                     <div class="form-group">
                                         <label>Descripcion:</label>
-                                        <textarea class="form-control" rows="3"
+                                        <textarea class="form-control rounded-10px" rows="3"
                                             name="descripcionProductoEditar"><?php echo($producto["descripcionProducto"])?></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-warning"
+                                    <button type="submit" class="btn btn-success rounded-20px"
                                         name="btnEditarProducto">Enviar</button>
                                 </form>
                             </div>

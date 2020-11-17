@@ -39,7 +39,7 @@
             <div class="row justify-content-center">
               <div class="col4">
                 <form class="mt-5 border border-info p-3 rounded-20px" enctype="multipart/form-data" action="registrarProductos.php" method="POST">
-                    <H4 class="text-center" >ADMINISTRACIÓN DE PRODUCTOS</H4>
+                    <H4 class="text-center alert alert-info" >ADMINISTRACIÓN DE PRODUCTOS</H4>
                     <div class="row mt-4">
                         <div class="col">
                             <input name="nombreproducto" type="text" class="form-control rounded-10px" placeholder="Nombre del producto">
@@ -59,7 +59,7 @@
                             <textarea class="form-control rounded-10px" name="txAreaDescripcion" rows="3" placeholder="Descripcion"></textarea>
                         </div>
                         <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-primary mt-5 rounded-10px " name=btnIngresarProducto>Registrar</button>
+                        <button type="submit" class="btn btn-info mt-5 rounded-10px " name=btnIngresarProducto>Registrar</button>
                         </div>
                     </div>                    
                 </form>

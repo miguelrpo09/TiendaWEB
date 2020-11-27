@@ -9,65 +9,62 @@
 </head>
 
 <body>
-<header>
-<nav class="navbar navbar-expand-lg navbar-dark bg-info">
-            <a class="navbar-brand" href="#">Tienda WEB</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item active">
-                    <a class="nav-link" href="formProductos.php" >Ingresar Productos</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="productosBodega.php">Productos Bodega</a>
-                  </li>
-                </ul>
-          </div>
-        </nav>
-</header>
-<main>
-<div class="container">
-            <div class="row justify-content-center">
-              <div class="col4">
-                <form class="mt-5 border border-info p-3 rounded-20px" enctype="multipart/form-data" action="registrarProductos.php" method="POST">
-                    <H4 class="text-center alert alert-info" >ADMINISTRACIÓN DE PRODUCTOS</H4>
-                    <div class="row mt-4">
-                        <div class="col">
-                            <input name="nombreproducto" type="text" class="form-control rounded-10px" placeholder="Nombre del producto">
-                        </div>
-                        <div class="col">
-                            <input name="marcaproducto" type="text" class="form-control rounded-10px" placeholder="Marca del producto">
-                        </div>                            
-                    </div>
-                        <div class="col4 mt-4">
-                            <input type="hidden" name="MAX_FILE_SIZE" value="4000000" />
-                            <input type="file" name="imgProducto" id="imgProducto" accept="image/png, .jpeg, .jpg, image/gif">
-                        </div>
-                        <div class="col4 mt-4">
-                            <input name="precioProducto" type="text" class="form-control rounded-10px" placeholder="Precio del producto">
-                        </div>
-                        <div class="col4 mt-4">
-                            <textarea class="form-control rounded-10px" name="txAreaDescripcion" rows="3" placeholder="Descripcion"></textarea>
-                        </div>
-                        <div class="row justify-content-center">
-                        <button type="submit" class="btn btn-info mt-5 rounded-10px " name=btnIngresarProducto>Registrar</button>
-                        </div>
-                    </div>                    
-                </form>
+
+  <header>
+    <nav class="col-12 navbar navbar-expand-lg navbar-dark bg-info">
+        <a class="navbar-brand" href="#">Tienda WEB</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.php">Inicio<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="formProductos.php" >Ingresar Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="productosBodega.php">Productos Bodega</a>
+              </li>
+            </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto col-md-auto col-sm-auto">
+          <form class="mt-5 border border-info p-3 rounded-20px" enctype="multipart/form-data" action="registrarProductos.php" method="POST">
+              <H4 class="text-center alert alert-info" >ADMINISTRACIÓN DE PRODUCTOS</H4>
+              <div class="row mt-4 form-group">
+                  <div class="col">
+                      <input name="nombreproducto" type="text" class="form-control rounded-10px" placeholder="Nombre del producto">
+                  </div>
+                  <div class="col">
+                      <input name="marcaproducto" type="text" class="form-control rounded-10px" placeholder="Marca del producto">
+                  </div>                            
               </div>
-            </div>
-          </div>
-
-
-
-
-</main>
-    
+                  <div class="col4 mt-4">
+                      <input type="hidden" class="form-control" name="MAX_FILE_SIZE" value="4000000" />
+                      <input type="file" class="form-control" name="imgProducto" id="imgProducto" accept="image/png, .jpeg, .jpg, image/gif">
+                  </div>
+                  <div class="col4 mt-4 form-group">
+                      <input name="precioProducto" type="text" class="form-control rounded-10px" placeholder="Precio del producto">
+                  </div>
+                  <div class="col4 mt-4 form-group">
+                      <textarea class="form-control rounded-10px" name="txAreaDescripcion" rows="3" placeholder="Descripcion"></textarea>
+                  </div>
+                  <div class="row justify-content-center">
+                  <button type="submit" class="btn btn-info mt-5 rounded-10px " name=btnIngresarProducto>Registrar</button>
+                  </div>
+              </div>                    
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

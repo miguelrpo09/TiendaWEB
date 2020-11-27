@@ -28,6 +28,28 @@
           </div>
         </nav>
 </header>
+<main>
+
+    <div class="btn-group-vertical col-2 " role="group" aria-label="Button group with nested dropdown">
+      <button type="button" href="" class="btn btn-info">Inicio</button>
+      <button type="button" class="btn btn-info">Ingresar Productos</button>
+      <button type="button" class="btn btn-info">Productos Bodega</button>
+      <button type="button" class="btn btn-info">Facturar</button>
+
+      <div class="btn-group" role="group">
+        <button id="btnGroupDrop1" type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </button>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="#">Dropdown link</a>
+          <a class="dropdown-item" href="#">Dropdown link</a>
+        </div>
+      </div>
+    </div>
+
+
+
+</main>
 
 
 
